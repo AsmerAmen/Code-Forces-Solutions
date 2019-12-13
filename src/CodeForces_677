@@ -1,0 +1,24 @@
+//============================================================================
+// Name        : CodeForces_0.cpp
+// Author      : Asmer Amen
+// Version     :
+// Copyright   : 
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, h, x, ans=0, i=0;
+	cin>>n>>h;
+	for(; i<n; i++){
+		cin>>x;
+		if (x > h)
+			ans++;
+		ans++;
+	}
+	cout<<ans<<endl;
+
+	return 0;
+}

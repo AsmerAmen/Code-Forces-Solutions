@@ -1,0 +1,35 @@
+/*
+ * CodeForces.cpp
+ *
+ *  Created on: Sep 20, 2019
+ *      Author: asmer
+ */
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, A=0, D=0;
+	char name;
+	int i=0;
+	cin>>n;
+	for(; i<n; i++){
+//		scanf("%c", &name);
+//		cout<<name<<endl;
+		cin>>name;
+		if (name == 'A')
+			A++;
+		else
+			D++;
+	}
+//	cout<<"A: "<<A<<endl;
+//	cout<<"D: "<<D<<endl;
+	if(A>D) cout<<"Anton"<<endl;
+	else if(A<D) cout<<"Danik"<<endl;
+	else cout<<"Friendship"<<endl;
+
+
+	return 0;
+}

@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+//	string first, second;
+	char first[100], second[100];
+	char input;
+	int index=0;
+	int f=0,s=0;
+
+	do{
+		scanf("%c", &input);
+		first[index++] = input;
+	}while(input != '\n');
+//	first[index++]='\0';
+	index=0;
+	do{
+		scanf("%c", &input);
+		second[index++] = input;
+	}while(input != '\n');
+//	second[index++]='\0';
+
+	for(int i =0; i<index; i++){
+		if(first[i]>=90)
+			first[i] -= 32;
+		if(second[i]>=90)
+			second[i] -= 32;
+		f+=first[i];
+		s+=second[i];
+	}
+
+	if(f==s)
+		cout<<"0"<<endl;
+	else if(f>s)
+		cout<<"1"<<endl;
+	else
+		cout<<"-1"<<endl;
+
+
+	return 0;
+}

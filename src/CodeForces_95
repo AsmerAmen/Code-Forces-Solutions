@@ -1,0 +1,48 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	char s[100];
+	char input;
+	int index=0, upper=0, lower=0;
+
+	scanf("%c", &input);
+	while(input != '\n'){
+		s[index++] = input;
+		if(input>=97)
+			lower++;
+		else if(input<=90)
+			upper++;
+		scanf("%c", &input);
+	}
+//	do{
+//		scanf("%c", &input);
+//		s[index++] = input;
+//		if(input>=97)
+//			lower++;
+//		else if(input<=90)
+//			upper++;
+//	}while(input != '\n');
+	
+//	cout<<lower<<" "<<upper<<endl;
+
+	if(lower>=upper)
+		for(int i=0; i<index; i++){
+			if(s[i] <=90)
+				s[i] += 32;
+		}
+	else
+		for(int i=0; i<index; i++){
+			if(s[i] >=97)
+				s[i] -= 32;
+		}
+	for(int i=0; i<index; i++)
+		cout<<s[i];
+//	printf("%s", s);
+
+
+
+
+	return 0;
+}

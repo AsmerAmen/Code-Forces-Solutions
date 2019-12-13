@@ -1,0 +1,48 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int count;
+	int rear=0, tail;
+	int *arr;
+	int S=0, D=0;
+
+	cin>>count;
+
+	tail=count-1;
+	arr = new int [count];
+	for(int i=0; i<count; i++)
+		cin>>arr[i];
+
+	int i=0;
+	do{
+		// Sereja
+		if((i%2)==0){
+			if(arr[rear]>arr[tail]){
+				S+=arr[rear];
+				rear++;
+			}
+			else{
+				S+=arr[tail];
+				tail--;
+			}
+		}
+		else{
+			if(arr[rear]>arr[tail]){
+				D+=arr[rear];
+				rear++;
+			}
+			else{
+				D+=arr[tail];
+				tail--;
+			}
+		}
+		i++;
+//		cout<<S<<" "<<D<<endl;
+//		cout<<"Rear: "<<rear<<" Tail: "<<tail<<endl;
+	}while(tail>=rear);
+	cout<<S<<" "<<D<<endl;
+
+	return 0;
+}
