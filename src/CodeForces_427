@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	unsigned int events_no = 0;
+	int event;
+	unsigned int crimes = 0, untreated = 0, cops = 0;
+
+	cin>>events_no;
+	for(int i = 0; i<events_no; i++){
+		cin>>event;
+		if(event == -1){
+			if(cops == 0)
+				untreated++;
+			else
+				cops--;
+		}
+		else
+			cops += event;
+	}
+	cout<<untreated;
+
+	return 0; 
+}
